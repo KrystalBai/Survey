@@ -1,0 +1,18 @@
+{
+  "name": "gruntxx",
+  "version": "0.0.1",
+  "description": "study grunt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yujiangshui/gruntxx.git"
+  },
+  "author": "Jiangshui",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yujiangshui/gruntxx/issues"
+  },
+  "homepage": "https://github.com/yujiangshui/gruntxx",
+  "devDependencies": {
+    "grunt-contrib-connect": "^1.0.1"
+  }
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Survey</title>
+    <link rel="shortcut icon" href="logo.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="modal"></div>
+<div class="modal-content">
+    <div class="modal-header">
+        <i class="close fa fa-times"></i>
+        <h2>提示</h2>
+    </div>
+    <div class="modal-body">
+        <p>确认要删除此问卷？</p>
+        <div class="modal-button">
+            <input type="button" value="确定" class="ok selected">
+            <input type="button" value="取消" class="cancel">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="header">
+        <a href="#" class="left">
+            <i class="fa fa-question-circle" aria-hidden="true"></i>
+            <span>问卷管理</span>
+        </a>
+        <span class="title">我的问卷</span>
+    </div>
+    <div class="main">
+        <div class="form"></div>
+    </div>
+</div>
+<script src="js/helpers.js"></script>
+<script src="js/config.js"></script>
+<script>
+    var dialog = Dialog({
+        "content": "确认要删除此问卷？"
+    });
+    var table = Table({
+        data: [{
+            "cb": "",
+            "title": "第一份",
+            "time": "2016-4-13 20:46:52",
+            "status": "发布中",
+            "btns": ["编辑", "删除", "查看数据"]
+        },
+            {
+                "cb": "",
+                "title": "第二份",
+                "time": "2016-4-12 20:46:52",
+                "status": "未发布",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第三份",
+                "time": "2016-4-18 20:46:52",
+                "status": "已结束",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第一份",
+                "time": "2016-4-22 20:46:52",
+                "status": "发布中",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第二份",
+                "time": "2016-4-10 20:46:52",
+                "status": "未发布",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第三份",
+                "time": "2016-4-12 23:46:52",
+                "status": "已结束",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第一份",
+                "time": "2016-4-12 19:46:52",
+                "status": "发布中",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第二份",
+                "time": "2016-4-2 20:46:52",
+                "status": "未发布",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第三份",
+                "time": "2016-4-30 20:46:52",
+                "status": "已结束",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第一份",
+                "time": "2016-4-4 20:46:52",
+                "status": "发布中",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第二份",
+                "time": "2016-4-6 20:46:52",
+                "status": "未发布",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第三份",
+                "time": "2016-4-29 20:46:52",
+                "status": "已结束",
+                "btns": ["编辑", "删除", "查看数据"]
+            },{
+                "cb": "",
+                "title": "第一份",
+                "time": "2016-4-12 20:12:52",
+                "status": "发布中",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第二份",
+                "time": "2016-4-12 20:46:12",
+                "status": "未发布",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第三份",
+                "time": "2016-3-12 20:46:52",
+                "status": "已结束",
+                "btns": ["编辑", "删除", "查看数据"]
+            },{
+                "cb": "",
+                "title": "第一份",
+                "time": "2016-5-12 20:46:52",
+                "status": "发布中",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第二份",
+                "time": "2016-7-12 20:46:52",
+                "status": "未发布",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第三份",
+                "time": "2016-4-1 20:46:52",
+                "status": "已结束",
+                "btns": ["编辑", "删除", "查看数据"]
+            },{
+                "cb": "",
+                "title": "第一份",
+                "time": "2016-4-16 20:46:52",
+                "status": "发布中",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第二份",
+                "time": "2016-4-24 20:46:52",
+                "status": "未发布",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第三份",
+                "time": "2016-4-8 18:46:52",
+                "status": "已结束",
+                "btns": ["编辑", "删除", "查看数据"]
+            },{
+                "cb": "",
+                "title": "第一份",
+                "time": "2016-3-11 20:46:52",
+                "status": "发布中",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第二份",
+                "time": "2016-2-12 20:46:52",
+                "status": "未发布",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第三份",
+                "time": "2016-1-12 20:46:52",
+                "status": "已结束",
+                "btns": ["编辑", "删除", "查看数据"]
+            },{
+                "cb": "",
+                "title": "第一份",
+                "time": "2015-4-12 20:46:52",
+                "status": "发布中",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第二份",
+                "time": "2015-12-12 20:46:52",
+                "status": "未发布",
+                "btns": ["编辑", "删除", "查看数据"]
+            },
+            {
+                "cb": "",
+                "title": "第三份",
+                "time": "2016-6-12 20:46:52",
+                "status": "已结束",
+                "btns": ["编辑", "删除", "查看数据"]
+            }],
+        context: '.main .form'
+    });
+</script>
+</body>
+</html>
