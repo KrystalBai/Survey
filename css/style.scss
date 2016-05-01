@@ -142,6 +142,7 @@ i.arrow{
   position: absolute;
   top: 46px;
   width: 100%;
+  height: calc(100% - 46px);
   min-width: 900px;
   padding:0 20px;
   box-sizing: border-box;
@@ -151,6 +152,8 @@ i.arrow{
   min-width: 860px;
   margin:70px auto;
   width:100%;
+  box-sizing: border-box;
+  padding: 26px 32px;
   background-color: $w;
   @include border-radius();
   @include box-shadow();
@@ -224,27 +227,29 @@ tbody .select-checkbox {
     top: 27px;
     left: 40%;
     @include checkboxInner;} }
-thead input[type=button]{
+thead,.addPoll{input[type=button]{
   color: $w;
+  border:1px solid $orange-fg;
+  background-color: $orange-btn;
+  @include btn;  }}
+thead{input[type=button]{
   position: absolute;
   top: 14px;
   right: 56px;
   padding: 3px 10px 2px 32px;
-  border:1px solid $orange-fg;
-  background-color: $orange-btn;
-  @include btn;  }
-thead input[type=button] {
+}}
+thead,.addPoll { input[type=button]{
   &:hover,&:focus,&:active{
     border-color: $gray-fg;
-    outline: 0; } }
+    outline: 0; } } }
 tbody,tfoot{input[type=button]{margin-right: 5px;}}
-tbody,tfoot,.modal-button{
+tbody,tfoot,.modal-button,footer{
   input[type=button]{
     padding:2px 10px;
     border:1px solid $gray-title;
     background-color: $w;
     @include btn; }}
-tbody,tfoot,.modal-button{
+tbody,tfoot,.modal-button,footer{
   input[type=button] {
     &:hover,&:focus,&:active{
       color: $gray-title;
@@ -337,4 +342,63 @@ tfoot .select-checkbox {
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
+}
+.addPoll{
+  padding: 120px 0;
+  text-align: center;}
+.addPoll i.add{
+  color: $w;
+  font-size: 30px;
+  position: relative;
+  cursor: pointer;
+  left: 60px;
+  top: 4px;
+}
+.addPoll{
+  input[type=button]{
+    font-size: 22px;
+    padding:12px 34px 12px 78px;
+  } }
+
+header{
+  padding: 16px 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+header:hover{background-color: $orange-bg;}
+main{
+  margin-top:26px;
+  border-top:2px solid $gray-fg;
+  border-bottom:2px solid $gray-fg;
+  padding: 25px;
+}
+main .addPart{
+  border: 1px solid $gray-fg;
+  background-color: $gray-bg;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+}
+.addPart a{
+  color: $gray-title;
+  font-size: 14px;}
+.addPart i{margin-right: 10px;}
+footer{
+  padding: 30px 0 40px;
+  text-align: center;
+  color: $gray-title;
+}
+footer input[type=text]{
+  width:250px;
+  height:40px;
+  font-size: 16px;
+  color: $gray-fg;
+  margin: 0 150px 0 16px;
+  outline: 0;
+  border: 1px solid $gray-bg;
+}
+footer input[type=button]{
+  margin-left: 20px;
+  padding:2px 20px;
 }
